@@ -102,7 +102,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 987df60e03b67274db2be37974fef576, type: 2}
   - {fileID: 11400000, guid: 4e7d102c576a3c248a71bdfc7480d3ac, type: 2}
   - {fileID: 11400000, guid: d5f7ca110f5cd024da957d2af6a5a56c, type: 2}
-  - {fileID: 11400000, guid: 3c8ea4c2ec27a354f9b5c8d162aff2c4, type: 2}
+  - {fileID: 11400000, guid: 29f4d53084b89344396c363deb152e02, type: 2}
+  - {fileID: 11400000, guid: 3b0e275a49004594cbfaa58f107f6302, type: 2}
+  - {fileID: 11400000, guid: 8d4b042fcefd3fc439a007591df0ead8, type: 2}
+  - {fileID: 11400000, guid: e4328b3d89aeb2e46b59c89ca08a401e, type: 2}
+  - {fileID: 11400000, guid: c35163e61905185458d7f8131e50a25d, type: 2}
+  - {fileID: 11400000, guid: daf1e3cc3d7fd8140b7553dce8a69e33, type: 2}
   m_ActiveProfileId: 5d211a032664caf45bb69f027aa88e62
   m_HostingServicesManager:
     m_HostingServiceInfos: []
