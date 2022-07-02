@@ -8,7 +8,7 @@ using UnityEngine;
 namespace CustomAASBuild.Editor
 {
     [DisplayName("For Separated Build Setting")]
-    public class SeparatedGroupBuildSchema : AddressableAssetGroupSchema
+    public class SeparatedBuildGroupSchema : AddressableAssetGroupSchema
     {
         public enum BuildGroupSeries
         {
@@ -52,9 +52,9 @@ namespace CustomAASBuild.Editor
                 {
                     foreach (var s in otherSchemas)
                     {
-                        var separatedGroupBuildSchema = s as SeparatedGroupBuildSchema;
-                        if (separatedGroupBuildSchema != null)
-                            separatedGroupBuildSchema.BuildGroup = newGroupValue;
+                        var separatedBuildGroupSchema = s as SeparatedBuildGroupSchema;
+                        if (separatedBuildGroupSchema != null)
+                            separatedBuildGroupSchema.BuildGroup = newGroupValue;
                     }
                 }
 
