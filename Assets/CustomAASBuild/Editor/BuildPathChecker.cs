@@ -11,6 +11,7 @@ namespace CustomAASBuild.Editor
         [MenuItem("AAS/Advanced/Get Paths for Addressable")]
         private static void GetAddressablePaths()
         {
+            // ReSharper disable once HeapView.BoxingAllocation
             var buildTarget = EditorUserBuildSettings.activeBuildTarget.ToString();
             var buildPath = Addressables.BuildPath;
             var runtimePath = Addressables.RuntimePath;
