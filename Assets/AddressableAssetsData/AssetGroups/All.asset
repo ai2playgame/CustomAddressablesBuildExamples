@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: All
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_Data:
@@ -31,3 +31,4 @@ MonoBehaviour:
     m_Schemas:
     - {fileID: 11400000, guid: bd78f0d73e917da4a992a9025c961114, type: 2}
     - {fileID: 11400000, guid: c8fd1f78142086341af870ae3c942134, type: 2}
+    - {fileID: 11400000, guid: ed1e7a523a8ff3b4f8baf796a1cdb07d, type: 2}
