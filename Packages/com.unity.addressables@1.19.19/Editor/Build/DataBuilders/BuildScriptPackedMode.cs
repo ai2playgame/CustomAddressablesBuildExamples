@@ -83,7 +83,7 @@ namespace UnityEditor.AddressableAssets.Build.DataBuilders
             return result;
         }
 
-        internal void InitializeBuildContext(AddressablesDataBuilderInput builderInput, out AddressableAssetsBuildContext aaContext)
+        public void InitializeBuildContext(AddressablesDataBuilderInput builderInput, out AddressableAssetsBuildContext aaContext)
         {
             var aaSettings = builderInput.AddressableSettings;
 
@@ -122,7 +122,7 @@ namespace UnityEditor.AddressableAssets.Build.DataBuilders
             m_CreatedProviderIds = new HashSet<string>();
         }
 
-        struct SBPSettingsOverwriterScope : IDisposable
+        public struct SBPSettingsOverwriterScope : IDisposable
         {
             bool m_PrevSlimResults;
             public SBPSettingsOverwriterScope(bool forceFullWriteResults)
