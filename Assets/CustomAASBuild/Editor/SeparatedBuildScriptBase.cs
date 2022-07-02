@@ -6,6 +6,7 @@ using UnityEditor.AddressableAssets.Settings;
 using UnityEditor.AddressableAssets.Settings.GroupSchemas;
 using UnityEditor.Build.Pipeline.Interfaces;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace CustomAASBuild.Editor
 {
@@ -16,11 +17,12 @@ namespace CustomAASBuild.Editor
         public virtual BuildGroupSeries BuildTargetGroup => BuildGroupSeries.GroupA;
         public virtual bool IsDebug => true;
 
-        private readonly Dictionary<AddressableAssetGroup, bool> m_SavedIncludeInBuildState = new();
+        private Dictionary<AddressableAssetGroup, bool> m_SavedIncludeInBuildState = new();
 
         protected override TResult BuildDataImplementation<TResult>(AddressablesDataBuilderInput builderInput)
         {
             TResult result = default(TResult);
+            Debug.Log("aiueo");
 
             var timer = new Stopwatch();
             timer.Start();
@@ -52,10 +54,14 @@ namespace CustomAASBuild.Editor
         {
             foreach (var group in settings.groups)
             {
+                var groupName = group.Name;
                 var bundledAssetGroupSchema = group.GetSchema<BundledAssetGroupSchema>();
                 var separatedBuildGroupSchema = group.GetSchema<SeparatedBuildGroupSchema>();
                 if (bundledAssetGroupSchema == null || separatedBuildGroupSchema == null)
+                {
+                    Debug.LogWarning("Not Found BuildGroupSchema");
                     continue;
+                }
 
                 var buildGroup = separatedBuildGroupSchema.BuildGroup;
                 m_SavedIncludeInBuildState.Add(group, bundledAssetGroupSchema.IncludeInBuild);
@@ -67,14 +73,18 @@ namespace CustomAASBuild.Editor
                 {
                     // Debug以外をビルド対象とする
                     bundledAssetGroupSchema.IncludeInBuild = (buildGroup != BuildGroupSeries.Debug);
-                    return;
+                    Debug.Log(
+                        $"GroupName: {groupName}, BuildTargetGroup: {BuildTargetGroup}, Result in IncludeInBuild: {bundledAssetGroupSchema.IncludeInBuild}");
+                    continue;
                 }
                 
                 if (BuildTargetGroup == BuildGroupSeries.Debug)
                 {
                     // Debugも含めてすべてをビルド対象とする
                     bundledAssetGroupSchema.IncludeInBuild = true;
-                    return;
+                    Debug.Log(
+                        $"GroupName: {groupName}, BuildTargetGroup: {BuildTargetGroup}, Result in IncludeInBuild: {bundledAssetGroupSchema.IncludeInBuild}");
+                    continue;
                 }
                 
                 // IncludedInAllGroup + GroupA or B + Debug (Debugフラグが立っているときのみ)
@@ -83,7 +93,9 @@ namespace CustomAASBuild.Editor
                     (buildGroup == BuildTargetGroup) ||
                     (IsDebug && buildGroup == BuildGroupSeries.Debug) ||
                     (buildGroup == BuildGroupSeries.IncludedInAllGroup);
-                return;
+
+                Debug.Log(
+                    $"GroupName: {groupName}, BuildTargetGroup: {BuildTargetGroup}, Result in IncludeInBuild: {bundledAssetGroupSchema.IncludeInBuild}");
             }
         }
         

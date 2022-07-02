@@ -35,7 +35,7 @@ namespace CustomAASBuild.Editor
         menuName = "Addressables/Content Builders/GroupB Release Build")]
     public class GroupBReleaseBuild : SeparatedBuildScriptBase
     {
-        public override string Name => "GroupB Release Script";
+        public override string Name => "GroupB Release Build Script";
         public override BuildGroupSeries BuildTargetGroup => BuildGroupSeries.GroupB;
         public override bool IsDebug => false;
     }
@@ -53,7 +53,7 @@ namespace CustomAASBuild.Editor
         menuName = "Addressables/Content Builders/AllGroup Release Build")]
     public class AllGroupReleaseBuild : SeparatedBuildScriptBase
     {
-        public override string Name => "AllGroup With Release Script";
+        public override string Name => "AllGroup Release Script";
         public override BuildGroupSeries BuildTargetGroup => BuildGroupSeries.IncludedInAllGroup;
         public override bool IsDebug => false;
     }
