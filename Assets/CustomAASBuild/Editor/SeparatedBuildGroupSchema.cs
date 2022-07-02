@@ -7,16 +7,17 @@ using UnityEngine;
 
 namespace CustomAASBuild.Editor
 {
+    public enum BuildGroupSeries
+    {
+        GroupA,
+        GroupB,
+        Debug,
+        IncludedInAllGroup,
+    }
+    
     [DisplayName("For Separated Build Setting")]
     public class SeparatedBuildGroupSchema : AddressableAssetGroupSchema
     {
-        public enum BuildGroupSeries
-        {
-            GroupA,
-            GroupB,
-            IncludedInAllGroup,
-        }
-
         [SerializeField]
         private BuildGroupSeries buildGroup = BuildGroupSeries.IncludedInAllGroup;
 
