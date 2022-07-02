@@ -15,20 +15,12 @@ MonoBehaviour:
   m_GroupName: All
   m_Data:
     m_SerializedData: []
-  m_GUID: 4701455218ec1fb4ba160b7183563078
-  m_SerializeEntries:
-  - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
-    m_Address: Assets/Scenes/SampleScene.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 671d902f02e0f9c4383e8f6912c14856
-    m_Address: Assets/Scenes/SampleScene_2.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+  m_GUID: 9ca6a40456ae56c48bb3e0848877cfb3
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ced3b3e3eaaf1e44fbfd38167f652744, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: bd78f0d73e917da4a992a9025c961114, type: 2}
-    - {fileID: 11400000, guid: c8fd1f78142086341af870ae3c942134, type: 2}
-    - {fileID: 11400000, guid: ed1e7a523a8ff3b4f8baf796a1cdb07d, type: 2}
+    - {fileID: 11400000, guid: 4e051bfb3d97b34428a25333a21fff38, type: 2}
+    - {fileID: 11400000, guid: c7ebf013371588c4bbf969868cb744d5, type: 2}
+    - {fileID: 11400000, guid: 00248f4d4f76caa4297b50cff05d78cf, type: 2}
