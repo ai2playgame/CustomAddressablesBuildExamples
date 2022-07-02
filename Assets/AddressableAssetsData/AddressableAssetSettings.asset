@@ -34,15 +34,16 @@ MonoBehaviour:
   m_MonoScriptBundleNaming: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: 184c7472447969a49ac3bcf7ddaaa882
   m_RemoteCatalogLoadPath:
-    m_Id: 
+    m_Id: 95b81ebd31c676342a9838be7f150dd9
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: de2b738bfeb2f9d45b89425999b452ca, type: 2}
   - {fileID: 11400000, guid: 3c30e8d62d91e0d40b8f2efd88791c5f, type: 2}
+  - {fileID: 11400000, guid: 7b9d030ff1aed8143a0167172fe2b616, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -91,12 +92,13 @@ MonoBehaviour:
   m_CertificateHandlerType:
     m_AssemblyName: 
     m_ClassName: 
-  m_ActivePlayerDataBuilderIndex: 3
+  m_ActivePlayerDataBuilderIndex: 4
   m_DataBuilders:
   - {fileID: 11400000, guid: 50adff08afddc70438549f92aa40f11e, type: 2}
   - {fileID: 11400000, guid: 987df60e03b67274db2be37974fef576, type: 2}
   - {fileID: 11400000, guid: 4e7d102c576a3c248a71bdfc7480d3ac, type: 2}
   - {fileID: 11400000, guid: d5f7ca110f5cd024da957d2af6a5a56c, type: 2}
+  - {fileID: 11400000, guid: 3c8ea4c2ec27a354f9b5c8d162aff2c4, type: 2}
   m_ActiveProfileId: 5d211a032664caf45bb69f027aa88e62
   m_HostingServicesManager:
     m_HostingServiceInfos: []
